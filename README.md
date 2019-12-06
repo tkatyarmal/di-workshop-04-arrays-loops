@@ -57,8 +57,10 @@ function draw() {
 Create a new sketch with the code and check it matched your prediction.
 
 **What's wrong with this code?**
+//its too repititive
 
 **How could we improve it?**
+//use a loop
 
 There's a lot of repetition in the code here. Generally, as programmers, we try
 to avoid repetition - often the more code we have, the more space there is for
@@ -284,31 +286,31 @@ happens.
 > **Note:** don’t copy-paste! If you copy paste these lines, some of them won’t
 > run correctly. Type them out by hand - it’s better practice anyway.
 
-| Line                      | Expected Result | Actual Result | Were you right? Why? |
-| ------------------------- | --------------- | ------------- | -------------------- |
-| `[]`                      |                 |               |                      |
-| `[1, 2, 3]`               |                 |               |                      |
-| `['a', 'b', 'c']`         |                 |               |                      |
-| `['a', 2, false]`         |                 |               |                      |
-| `[].length`               |                 |               |                      |
-| `[5, 6, 7].length`        |                 |               |                      |
-| `var myArray = [5, 6, 7]` |                 |               |                      |
-| `myArray`                 |                 |               |                      |
-| `myArray.length`          |                 |               |                      |
-| `myArray[1]`              |                 |               |                      |
-| `myArray[0]`              |                 |               |                      |
-| `myArray[2]`              |                 |               |                      |
-| `myArray[3]`              |                 |               |                      |
-| `myArray[1] = 'hi'`       |                 |               |                      |
-| `myArray[1]`              |                 |               |                      |
-| `myArray`                 |                 |               |                      |
-| `myArray.push(14)`        |                 |               |                      |
-| `myArray`                 |                 |               |                      |
-| `myArray.length`          |                 |               |                      |
-| `var index = 1`           |                 |               |                      |
-| `myArray[index]`          |                 |               |                      |
-| `index = 2`               |                 |               |                      |
-| `myArray[index]`          |                 |               |                      |
+| Line                      | Expected Result | Actual Result       | Were you right? Why? |
+| ------------------------- | --------------- | ------------------- | -------------------- |
+| `[]`                      |       []        |     []              |         Y            |
+| `[1, 2, 3]`               |    [1, 2, 3]    | (3) [1, 2, 3]       |         CLOSE        |
+| `['a', 'b', 'c']`         | ['a', 'b', 'c'] | (3) ["a", "b", "c"] |         CLOSE        |
+| `['a', 2, false]`         | ['a', 2, false] | (3) ["a", 2, false] |         CLOSE        |
+| `[].length`               |    0            |         0           |         Y            |
+| `[5, 6, 7].length`        |    3            |        3            |         Y            |
+| `var myArray = [5, 6, 7]` |                 |                     |         Y            |
+| `myArray`                 |   [5, 6, 7]     |  (3) [5, 6, 7]      |         CLOSE        |
+| `myArray.length`          |      3          |        3            |         Y            |
+| `myArray[1]`              |      6          |        6            |         Y            |
+| `myArray[0]`              |      5          |        5            |         Y            |
+| `myArray[2]`              |      7          |        7            |         Y            |
+| `myArray[3]`              |   undefined     |    undefined        |         Y            |
+| `myArray[1] = 'hi'`       |     'hi'        |     'hi'            |         Y            |
+| `myArray[1]`              |     'hi'        |     'hi'            |         Y            |
+| `myArray`                 |    [5, 'hi', 7] |    [5, 'hi', 7]     |         Y            |
+| `myArray.push(14)`        |                 |       4             |         N            |
+| `myArray`                 |[5, 'hi', 7, 14] |(4) [5, "hi", 7, 14] |         CLOSE        |
+| `myArray.length`          |     4           |       4             |         Y            |
+| `var index = 1`           |                 |      undefined      |         Y            |
+| `myArray[index]`          |     'hi'        |        'hi'         |         Y            |
+| `index = 2`               |      2          |        2            |         Y            |
+| `myArray[index]`          |      7          |        7            |         Y            |
 
 Hopefully you'll be able to see that:
 
